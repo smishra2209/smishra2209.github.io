@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Welcome</title>
+	<meta name="description" content="Suraj Mishra's Portfolio">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+	
+</head>
+<body class="top-image" data-spy="scroll" data-target="#my-navbar">
+	<div class="overlay">
+		<div class="closebtn">
+			<img src="img/close.png" onclick="stopVideo();closeVideo();" style="height: 30px;">
+		</div>
+		<div id="player"></div>
+
+	</div>
+	<nav class="navbar navbar-default navbar-fixed-top" id="my-navbar">
+
+	<div class="container">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+				<span class="glyphicon glyphicon-menu-hamburger"></span>
+				
+			</button>
+			<div class="navbar-brand">TSTM</div>
+		</div>
+		<div class="collapse navbar-collapse" id="navbar-collapse">
+			<ul class="nav navbar-nav">
+				<li><a href="#bootstrap"><img src="img/bootstrap.png" class="img-circle slide-nav-left"></a></li>
+				<li><a href="#react"><img src="img/react.png" class="img-circle slide-nav-left-one"></a></li>
+				<li><a href="#nodejs"><img src="img/nodejs.png" class="img-circle slide-nav-left-two"></a></li>
+				<li><a href="#mongodb"><img src="img/mongodb.png" class="img-circle slide-nav-left-three"></a></li>
+				<li><a href="#reactnative"><img src="img/reactnative.png" class="img-circle slide-nav-left-four"></a></li>
+				<li><a href="#android"><img src="img/android.png" class="img-circle slide-nav-left-five"></a></li>
+			</ul>
+			<ul class="nav navbar-nav navbar-right">
+				<li><img src="img/share.png" class="img-nav-extra"></li>
+				<li><img src="img/play.png" class="img-nav-extra"></li>
+				<li><img src="img/contactus.png" class="img-nav-extra"></li>
+			</ul>
+		</div>
+	</div>
+</nav>
+	<div class="jumbotron">
+		<div class="container text-center">
+			<h1 class="slide-top-slow">HELLO!</h1>
+			<p class="slide-top-fast">Welcome to my website. I love the words Full stack and optimize to not let it overflow. Go on. click on everything. check out my projects.</p>
+			<hr>
+		</div>
+	</div>
+
+	<div class="container">
+		<section style="margin-top: -40px;">
+			<div class="page-header custom-page-header" id="skills"></div>
+			<div class="row">
+				<div class="col-sm-6 slide-left">
+					<blockquote>
+						<p>"It's hard to get out of the barrel. It's slippery around the edges. But we all are still allowed to make mistakes and be forgiven. It's always better than being forgotten. Eventually we can make our monday suck a little less."</p>
+					</blockquote>
+				</div>
+				<div class="col-sm-6 slide-right">
+					
+					
+						<img src="img/brain.png" style="margin-top: -25px; float: right;">
+					
+				</div>
+			</div>
+		</section>
+		<hr>
+	</div>
+
+	<div class="container" id="bootstrap">
+		<section class="skills-section">
+			<div class="page-header custom-page-header" >
+				
+			</div>
+			<div class="col-lg-6 skills-section-bg">
+				<h2 class="text-center" style="color: #4A148C;">Bootstrap</h2>
+				<hr>
+			</div>
+			<div class="col-lg-6 logo-bg" id="bootstrap-logo">
+				<div class="linkstoprojects text-center">
+					<a onclick="openVideo('bootstrap');"><img src="img/linkyoutube.png"></a>
+					<a href=""><img src="img/linkgithub.png"></a>
+				</div>
+			</div>
+		</section>
+		<hr>
+	</div>
+	
+	<div class="container" id="react">
+		<section class="skills-section">
+			<div class="page-header custom-page-header">
+				
+			</div>
+			<div class="col-lg-6 logo-bg" id="reactjs-logo">
+				<div class="linkstoprojects text-center">
+					<a onclick="openVideo('reactjs');"><img src="img/linkyoutube.png"></a>
+					<a href=""><img src="img/linkgithub.png"></a>
+				</div>
+			</div>
+			<div class="col-lg-6 skills-section-bg">
+				<h2 class="text-center" style="color: #29b6f6;">ReactJS</h2>
+				<hr>
+			</div>
+		</section>
+		<hr>
+	</div>
+	
+	<div class="container" id="nodejs">
+		<section class="skills-section">
+			<div class="page-header custom-page-header">
+				
+			</div>
+			<div class="col-lg-6 skills-section-bg">
+				<h2 class="text-center" style="color: #66bb6a;">NodeJS</h2>
+				<hr>
+			</div>
+			<div class="col-lg-6 logo-bg" id="nodejs-logo">
+				<div class="linkstoprojects text-center">
+					<a onclick="openVideo('nodejs');"><img src="img/linkyoutube.png"></a>
+					<a href=""><img src="img/linkgithub.png"></a>
+				</div>
+			</div>
+		</section>
+		<hr>
+	</div>
+	
+	<div class="container" id="mongodb">
+		<section class="skills-section">
+			<div class="page-header custom-page-header">
+				
+			</div>
+			<div class="col-lg-6 logo-bg" id="mongodb-logo">
+				<div class="linkstoprojects text-center">
+					<a onclick="openVideo('mongodb');"><img src="img/linkyoutube.png"></a>
+					<a href=""><img src="img/linkgithub.png"></a>
+				</div>
+			</div>
+			<div class="col-lg-6 skills-section-bg">
+				<h2 class="text-center" style="color: #78909c;">MongoDB</h2>
+				<hr>
+			</div>
+		</section>
+		<hr>
+	</div>
+	
+	<div class="container" id="reactnative">
+		<section class="skills-section">
+			<div class="page-header custom-page-header">
+				
+			</div>
+			<div class="col-lg-6 skills-section-bg">
+				<h2 class="text-center" style="color: #5c6bc0;">React-Native</h2>
+				<hr>
+			</div>
+			<div class="col-lg-6 logo-bg" id="reactnative-logo">
+				<div class="linkstoprojects text-center">
+					<a onclick="openVideo('reactnative');"><img src="img/linkyoutube.png"></a>
+					<a href=""><img src="img/linkgithub.png"></a>
+				</div>
+			</div>
+		</section>
+		<hr>
+	</div>
+	
+	<div class="container" id="android">
+		<section class="skills-section">
+			<div class="page-header custom-page-header">
+				
+			</div>
+			<div class="col-lg-6 logo-bg" id="android-logo">
+				<div class="linkstoprojects text-center">
+					<a onclick="openVideo('android');"><img src="img/linkyoutube.png"></a>
+					<a href="#"><img src="img/linkgithub.png"></a>
+
+				</div>
+			</div>
+			<div class="col-lg-6 skills-section-bg">
+				<h2 class="text-center" style="color: #388e3c;">Android</h2>
+				<hr>
+			</div>
+		</section>
+		<hr>
+	</div>
+	
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js" type="text/javascript"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+	<script src="js/index.js"></script>
+</body>
+
+</html>
