@@ -39,48 +39,7 @@
 		duration:500,
 		origin: 'bottom'
 	});
-	sr2.reveal('.slide-nav-left',
-		{
-			duration:700,
-			origin: 'left',
-			distance: '50px'
-		}
-	);
-	sr2.reveal('.slide-nav-left-one',
-		{
-			duration:700,
-			origin: 'left',
-			distance: '100px'
-		}
-	);
-	sr2.reveal('.slide-nav-left-two',
-		{
-			duration:700,
-			origin: 'left',
-			distance: '150px'
-		}
-	);
-	sr2.reveal('.slide-nav-left-three',
-		{
-			duration:700,
-			origin: 'left',
-			distance: '200px'
-		}
-	);
-	sr2.reveal('.slide-nav-left-four',
-		{
-			duration:700,
-			origin: 'left',
-			distance: '250px'
-		}
-	);
-	sr2.reveal('.slide-nav-left-five',
-		{
-			duration:700,
-			origin: 'left',
-			distance: '300px'
-		}
-	);
+
 
 	$("#navbar-collapse ul li a[href^='#']").on('click', function(e) {
    	e.preventDefault();
@@ -92,47 +51,14 @@
      });
 
 });
-	
 
-	$(document).ready(function(){
-		
-      $(window).scroll(function() { 
-
-      	$("#my-navbar").removeClass("nav-bar-purple");
-      	$("#my-navbar").removeClass("nav-bar-blue");
-      	$("#my-navbar").removeClass("nav-bar-green");
-      	$("#my-navbar").removeClass("nav-bar-bluegray");
-      	$("#my-navbar").removeClass("nav-bar-gray");
-      	$("#my-navbar").removeClass("nav-bar-greenblue");
-      	$("#my-navbar").removeClass("nav-bar-origin");
-
-        if ($(document).scrollTop() > 4060) { 
-          $("#my-navbar").addClass("nav-bar-greenblue");
-        }
-        else if ($(document).scrollTop() > 3360) { 
-          $("#my-navbar").addClass("nav-bar-blue");
-        }else if ($(document).scrollTop() > 2710) { 
-          $("#my-navbar").addClass("nav-bar-gray"); 
-        }else if ($(document).scrollTop() > 2060) {
-          $("#my-navbar").addClass("nav-bar-green");
-        }else if ($(document).scrollTop() > 1360) { 
-          $("#my-navbar").addClass("nav-bar-bluegray");
-        }else if ($(document).scrollTop() > 660) { 
-          $("#my-navbar").addClass("nav-bar-purple"); 
-        }
-        else if ($(document).scrollTop() > 20) { 
-          $("#my-navbar").addClass("nav-bar-origin"); 
-        } else {
-          
-        }
-      });
-    });
+    
 
     $("html,body").animate({scrollTop: 0},"slide-top-slow");
 
     
     function closeVideo() {
-    	$('.overlay').css("visibility","hidden");
+    	$('#videoOverlay').css("visibility","hidden");
     }
 
       // 2. This code loads the IFrame Player API code asynchronously.
@@ -172,7 +98,39 @@
         player.stopVideo();
       }
       function openVideo(key){
-    	$('.overlay').css("visibility","visible");
+    	$('#videoOverlay').css("visibility","visible");
     	player.loadVideoById('OcVE6rQ9_FU');
     }
+
+    function closeinfo(){
+    	$('#infoOverlay').css("visibility","hidden");
+    }
+     function closecontact(){
+    	$('#contactOverlay').css("visibility","hidden");
+    }
+
+    function openInfo(){
+    	$('#infoOverlay').css("visibility","visible");
+    }
+     function openContact(){
+    	$('#contactOverlay').css("visibility","visible");
+    }
+    
+    $('#ajax-contact').submit(function(event) {
+    // Stop the browser from submitting the form.
+    event.preventDefault();
+    var formData = $('#ajax-contact').serialize();
+    $.ajax({
+    type: 'POST',
+    url: $('#ajax-contact').attr('action'),
+    data: formData
+	}).done(function(response) {
+    
+    $('#name').val('');
+    $('#email').val('');
+    $('#message').val('');
+	}).fail(function(data) {
+    
+});
+});
    

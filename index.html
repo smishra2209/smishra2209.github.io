@@ -11,41 +11,110 @@
 	
 </head>
 <body class="top-image" data-spy="scroll" data-target="#my-navbar">
-	<div class="overlay">
+	<div class="overlay" id="videoOverlay">
+		
+		<div class="text-center video-container">
+		<div id="player"></div>
 		<div class="closebtn">
 			<img src="img/close.png" onclick="stopVideo();closeVideo();" style="height: 30px;">
 		</div>
-		<div id="player"></div>
+		</div>
 
 	</div>
-	<nav class="navbar navbar-default navbar-fixed-top" id="my-navbar">
+	<div class="overlay" id="infoOverlay">
+		
+		<div class="text-center container" style="margin-top: 40px; height: 100%;">
+			<div class="custom-page-header" style="width: 100%">
+				<div class="closebtn col-sm-1" style="margin-right: 0 !important; margin-top: 0px !important">
+						<img src="img/close.png" onclick="closeinfo();" style="height: 30px;">
+					</div>
+			</div>
+			<section style="height: 100%; width: 100%">
+				<div class="row text-center" style="height: 90%">
+					<div class="col-sm-4" style=" width: 30%; margin-bottom: 20px;">
+						<div class="">
+							<img src="img/dp.jpg" style="width: 90%; margin-top: 10px; border-radius: 10%; border: 2px solid white;">
+						</div>
+					</div>
+					<div class="col-sm-6 text-center" style="height: 100%;">
+					<div style="background: white; border-radius: 10px; margin-top: -10px; font-family: 'fancyfonttwo',Times, serif;">
+						<h2 class="text-center" style="color: black; font-size: 50px; margin-top: 10px">Suraj Mishra</h2>
+						<hr>
+						<div style="font-size: 30px;">
+						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.<br>
+						<a href="https://www.linkedin.com/in/thesurajthemishra"><img src="img/linkedin.png" class="img-circle">
+						</a>
+						<a href="https://www.github.com/smishra2209"><img src="img/linkgithub.png" class="img-circle"></a>
+						</p>
+						</div>
+					</div>
+					
+					</div>
+				</div>
 
-	<div class="container">
-		<div class="navbar-header">
-			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
-				<span class="glyphicon glyphicon-menu-hamburger"></span>
-				
-			</button>
-			<div class="navbar-brand">TSTM</div>
+			</section>
+		
 		</div>
-		<div class="collapse navbar-collapse" id="navbar-collapse">
-			<ul class="nav navbar-nav">
-				<li><a href="#bootstrap"><img src="img/bootstrap.png" class="img-circle slide-nav-left"></a></li>
-				<li><a href="#react"><img src="img/react.png" class="img-circle slide-nav-left-one"></a></li>
-				<li><a href="#nodejs"><img src="img/nodejs.png" class="img-circle slide-nav-left-two"></a></li>
-				<li><a href="#mongodb"><img src="img/mongodb.png" class="img-circle slide-nav-left-three"></a></li>
-				<li><a href="#reactnative"><img src="img/reactnative.png" class="img-circle slide-nav-left-four"></a></li>
-				<li><a href="#android"><img src="img/android.png" class="img-circle slide-nav-left-five"></a></li>
-			</ul>
-			<ul class="nav navbar-nav navbar-right">
-				<li><img src="img/share.png" class="img-nav-extra"></li>
-				<li><img src="img/play.png" class="img-nav-extra"></li>
-				<li><img src="img/contactus.png" class="img-nav-extra"></li>
-			</ul>
+
+	</div>
+	<div class="overlay" id="contactOverlay">
+		
+		<div class="text-center container" style="margin-top: 40px; height: 100%;">
+		<div class="custom-page-header" style="width: 100%">
+			<div class="closebtn col-sm-1" style="margin-right: 0 !important; margin-top: 0px !important">
+			<img src="img/close.png" onclick="closecontact();" style="height: 30px;">
+		</div>
+		</div>
+		<section class="text-center" style="height: 100%; width: 100%; margin-top: 100px;">
+		<div class="row">
+			<div class="col-sm-12">
+				<form style="margin-left: 50px; margin-right: 50px;" id="ajax-contact" method="post" action="mailer.php">
+              <div class="form-group">
+                
+                <input class="form-control" type="text" name="name" id="name" value="" placeholder="Enter Name" style="font-size: 30px;height: 50px;">
+              </div>
+              <div class="form-group">
+                
+                <input class="form-control" type="text" name="email" id="email" value="" placeholder="Enter Email" style="font-size: 30px;height: 50px;">
+              </div>
+              <div class="form-group">
+                
+                <textarea class="form-control" name="message" id="message" value="" placeholder="Enter Message" style="font-size: 30px;height: 150px;"></textarea>
+              </div>
+              <button class="btn btn-primary" style="font-size: 25px; width: 100%" type="submit">Submit</button>
+            </form>
+			</div>
+		</div>
+			
+		</section>
+		</div>
+
+	</div>
+
+	<nav class="navbar navbar-default navbar-fixed-top animate" id="my-navbar" style="position: fixed;">
+
+	<div class="container" >
+		<div class="navbar-header">
+		<div class="navbar-brand" style="margin-left: 15px !important; margin-bottom: 5px !important;">TSTM</div>
+			<div class="container" style="padding-top: 15px;">
+			
+			
+			<a href="#bootstrap" style="margin-left: 10px;"><img src="img/bootstrap.png" class="img-circle slide-nav-left"></a>
+			<a href="#react" style="margin-left: 10px;"><img src="img/react.png" class="img-circle slide-nav-left-one"></a>
+			<a href="#nodejs" style="margin-left: 10px;"><img src="img/nodejs.png" class="img-circle slide-nav-left-two"></a>
+			<a href="#mongodb" style="margin-left: 10px;"><img src="img/mongodb.png" class="img-circle slide-nav-left-three"></a>
+			<a href="#reactnative" style="margin-left: 10px;"><img src="img/reactnative.png" class="img-circle slide-nav-left-four"></a>
+			<a href="#android" style="margin-left: 10px;"><img src="img/android.png" class="img-circle slide-nav-left-five"></a>
+			<div class="extras">
+				<a style="margin-left: 10px;" onclick="openInfo();"><img src="img/info.png" class="img-circle"></a>
+				<a style="margin-left: 10px;" onclick="openContact();"><img src="img/contact.png" class="img-circle"></a>
+			</div>
+			</div>
+			
 		</div>
 	</div>
 </nav>
-	<div class="jumbotron">
+	<div class="jumbotron" onfocus="changeColor(this);">
 		<div class="container text-center">
 			<h1 class="slide-top-slow">HELLO!</h1>
 			<p class="slide-top-fast">Welcome to my website. I love the words Full stack and optimize to not let it overflow. Go on. click on everything. check out my projects.</p>
@@ -62,10 +131,10 @@
 						<p>"It's hard to get out of the barrel. It's slippery around the edges. But we all are still allowed to make mistakes and be forgiven. It's always better than being forgotten. Eventually we can make our monday suck a little less."</p>
 					</blockquote>
 				</div>
-				<div class="col-sm-6 slide-right">
+				<div class="col-sm-6 slide-right text-center">
 					
 					
-						<img src="img/brain.png" style="margin-top: -25px; float: right;">
+						<img src="img/brain.png" style="margin-top: -25px; ">
 					
 				</div>
 			</div>
@@ -73,116 +142,147 @@
 		<hr>
 	</div>
 
-	<div class="container" id="bootstrap">
+	<div class="container" id="bootstrap" onfocus="changeColor(this);">
 		<section class="skills-section">
-			<div class="page-header custom-page-header" >
-				
-			</div>
-			<div class="col-lg-6 skills-section-bg">
+			<div class="row" style="margin-left: 0px !important; margin-right: 0px !important;">
+			<div class="col-sm-6 skills-section-bg">
 				<h2 class="text-center" style="color: #4A148C;">Bootstrap</h2>
 				<hr>
+				<div>
+				<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+				</div>
 			</div>
-			<div class="col-lg-6 logo-bg" id="bootstrap-logo">
+			<div class="col-sm-6 logo-bg">
 				<div class="linkstoprojects text-center">
+					<div>
+					<a><img src="img/bootstrap-bg.png" class="bgimage"></a>
+					</div>
 					<a onclick="openVideo('bootstrap');"><img src="img/linkyoutube.png"></a>
 					<a href=""><img src="img/linkgithub.png"></a>
 				</div>
 			</div>
+			</div>
 		</section>
 		<hr>
 	</div>
 	
-	<div class="container" id="react">
+	<div class="container" id="react" onfocus="changeColor(this);">
 		<section class="skills-section">
-			<div class="page-header custom-page-header">
-				
-			</div>
-			<div class="col-lg-6 logo-bg" id="reactjs-logo">
+			<div class="row" style="margin-left: 0px !important; margin-right: 0px !important;">
+			<div class="col-sm-6 logo-bg">
 				<div class="linkstoprojects text-center">
+					<div>
+					<a><img src="img/reactjs-bg.png" class="bgimage"></a>
+					</div>
 					<a onclick="openVideo('reactjs');"><img src="img/linkyoutube.png"></a>
 					<a href=""><img src="img/linkgithub.png"></a>
 				</div>
 			</div>
-			<div class="col-lg-6 skills-section-bg">
+			<div class="col-sm-6 skills-section-bg">
 				<h2 class="text-center" style="color: #29b6f6;">ReactJS</h2>
 				<hr>
+				<div>
+				<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+				</div>
 			</div>
 		</section>
+		</div>
 		<hr>
 	</div>
 	
-	<div class="container" id="nodejs">
+	<div class="container" id="nodejs" onfocus="changeColor(this);">
 		<section class="skills-section">
-			<div class="page-header custom-page-header">
-				
-			</div>
-			<div class="col-lg-6 skills-section-bg">
+			<div class="row" style="margin-left: 0px !important; margin-right: 0px !important;">
+			<div class="col-sm-6 skills-section-bg">
 				<h2 class="text-center" style="color: #66bb6a;">NodeJS</h2>
 				<hr>
+				<div>
+				<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+				</div>
 			</div>
-			<div class="col-lg-6 logo-bg" id="nodejs-logo">
+			<div class="col-sm-6 logo-bg">
 				<div class="linkstoprojects text-center">
+					<div>
+					<a><img src="img/nodejs-bg.png" class="bgimage"></a>
+					</div>
 					<a onclick="openVideo('nodejs');"><img src="img/linkyoutube.png"></a>
 					<a href=""><img src="img/linkgithub.png"></a>
 				</div>
 			</div>
+			</div>
 		</section>
+		
 		<hr>
 	</div>
 	
-	<div class="container" id="mongodb">
+	<div class="container" id="mongodb" onfocus="changeColor(this);">
 		<section class="skills-section">
-			<div class="page-header custom-page-header">
-				
-			</div>
-			<div class="col-lg-6 logo-bg" id="mongodb-logo">
+			<div class="row" style="margin-left: 0px !important; margin-right: 0px !important;">
+			<div class="col-sm-6 logo-bg">
 				<div class="linkstoprojects text-center">
+					<div>
+					<a><img src="img/mongodb-bg.png" class="bgimage"></a>
+					</div>
 					<a onclick="openVideo('mongodb');"><img src="img/linkyoutube.png"></a>
 					<a href=""><img src="img/linkgithub.png"></a>
 				</div>
 			</div>
-			<div class="col-lg-6 skills-section-bg">
+			<div class="col-sm-6 skills-section-bg">
 				<h2 class="text-center" style="color: #78909c;">MongoDB</h2>
 				<hr>
+				<div>
+				<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+				</div>
+			</div>
 			</div>
 		</section>
 		<hr>
 	</div>
 	
-	<div class="container" id="reactnative">
+	<div class="container" id="reactnative" onfocus="changeColor(this);">
 		<section class="skills-section">
-			<div class="page-header custom-page-header">
-				
-			</div>
-			<div class="col-lg-6 skills-section-bg">
+			<div class="row" style="margin-left: 0px !important; margin-right: 0px !important;">
+			<div class="col-sm-6 skills-section-bg">
 				<h2 class="text-center" style="color: #5c6bc0;">React-Native</h2>
 				<hr>
+				<div>
+				<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+				</div>
 			</div>
-			<div class="col-lg-6 logo-bg" id="reactnative-logo">
+			<div class="col-sm-6 logo-bg">
 				<div class="linkstoprojects text-center">
+					<div>
+					<a><img src="img/react-native-bg.png" class="bgimage"></a>
+					</div>
 					<a onclick="openVideo('reactnative');"><img src="img/linkyoutube.png"></a>
 					<a href=""><img src="img/linkgithub.png"></a>
 				</div>
 			</div>
+			</div>
 		</section>
 		<hr>
 	</div>
 	
-	<div class="container" id="android">
+	<div class="container" id="android" onfocus="changeColor(this);">
 		<section class="skills-section">
-			<div class="page-header custom-page-header">
-				
-			</div>
-			<div class="col-lg-6 logo-bg" id="android-logo">
+			<div class="row" style="margin-left: 0px !important; margin-right: 0px !important;">
+			<div class="col-sm-6 logo-bg">
 				<div class="linkstoprojects text-center">
+					<div>
+					<a><img src="img/android-bg.png" class="bgimage"></a>
+					</div>
 					<a onclick="openVideo('android');"><img src="img/linkyoutube.png"></a>
 					<a href="#"><img src="img/linkgithub.png"></a>
 
 				</div>
 			</div>
-			<div class="col-lg-6 skills-section-bg">
+			<div class="col-sm-6 skills-section-bg">
 				<h2 class="text-center" style="color: #388e3c;">Android</h2>
 				<hr>
+				<div>
+				<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+				</div>
+			</div>
 			</div>
 		</section>
 		<hr>
