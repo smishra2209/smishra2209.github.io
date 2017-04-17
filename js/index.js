@@ -115,22 +115,4 @@
      function openContact(){
     	$('#contactOverlay').css("visibility","visible");
     }
-    
-    $('#ajax-contact').submit(function(event) {
-    // Stop the browser from submitting the form.
-    event.preventDefault();
-    var formData = $('#ajax-contact').serialize();
-    $.ajax({
-    type: "POST",
-    url: $('#ajax-contact').attr('action'),
-    data: formData
-	}).done(function(response) {
-    
-    $('#name').val('');
-    $('#email').val('');
-    $('#message').val('');
-	}).fail(function(data) {
-    
-});
-});
    
