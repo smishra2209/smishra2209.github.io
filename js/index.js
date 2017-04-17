@@ -121,7 +121,7 @@
     event.preventDefault();
     var formData = $('#ajax-contact').serialize();
     $.ajax({
-    type: 'POST',
+    type: "POST",
     url: $('#ajax-contact').attr('action'),
     data: formData
 	}).done(function(response) {
@@ -134,3 +134,14 @@
 });
 });
    
+   function csrfSafeMethod(method) {
+    // these HTTP methods do not require CSRF protection
+    return (/^(GET|HEAD|OPTIONS|TRACE)$/.test(method));
+}
+$.ajaxSetup({
+    beforeSend: function(xhr, settings) {
+        if (!csrfSafeMethod(settings.type) && !this.crossDomain) {
+            xhr.setRequestHeader("X-CSRF-Token", CSRF_TOKEN);
+        }
+    }
+});
